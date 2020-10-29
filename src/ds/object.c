@@ -28,7 +28,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "redis.h"
+#include "../redis.h"
 #include <math.h>
 #include <ctype.h>
 

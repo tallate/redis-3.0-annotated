@@ -31,7 +31,7 @@
  */
 
 
-#include "redis.h"
+#include "../redis.h"
 
 #include <sys/time.h>
 #include <unistd.h>

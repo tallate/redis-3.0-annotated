@@ -31,10 +31,10 @@
 #define __REDIS_RDB_H
 
 #include <stdio.h>
-#include "rio.h"
+#include "../rio.h"
 
 /* TBD: include only necessary headers. */
-#include "redis.h"
+#include "../redis.h"
 
 /* The current RDB version. When the format changes in a way that is no longer
  * backward compatible this number gets incremented.

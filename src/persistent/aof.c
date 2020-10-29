@@ -27,9 +27,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "redis.h"
-#include "bio.h"
-#include "rio.h"
+#include "../redis.h"
+#include "../io/bio.h"
+#include "../rio.h"
 
 #include <signal.h>
 #include <fcntl.h>

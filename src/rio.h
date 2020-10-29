@@ -34,7 +34,7 @@
 
 #include <stdio.h>
 #include <stdint.h>
-#include "sds.h"
+#include "ds/sds.h"
 
 /*
  * RIO API 接口和状态

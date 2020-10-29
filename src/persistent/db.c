@@ -27,8 +27,8 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "redis.h"
-#include "cluster.h"
+#include "../redis.h"
+#include "../cluster/cluster.h"
 
 #include <signal.h>
 #include <ctype.h>

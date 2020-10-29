@@ -28,7 +28,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "redis.h"
+#include "../redis.h"
 #include "hiredis.h"
 #include "async.h"
 

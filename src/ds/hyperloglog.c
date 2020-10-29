@@ -29,7 +29,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "redis.h"
+#include "../redis.h"
 
 #include <stdint.h>
 #include <math.h>

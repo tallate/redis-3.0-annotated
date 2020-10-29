@@ -45,12 +45,12 @@
 #include <limits.h>
 
 #include "hiredis.h"
-#include "sds.h"
-#include "zmalloc.h"
+#include "ds/sds.h"
+#include "ds/zmalloc.h"
 #include "linenoise.h"
 #include "help.h"
-#include "anet.h"
-#include "ae.h"
+#include "io/anet.h"
+#include "event/ae.h"
 
 #define REDIS_NOTUSED(V) ((void) V)
 

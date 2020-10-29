@@ -28,9 +28,9 @@
  */
 
 #include "redis.h"
-#include "cluster.h"
+#include "cluster/cluster.h"
 #include "slowlog.h"
-#include "bio.h"
+#include "io/bio.h"
 
 #include <time.h>
 #include <signal.h>

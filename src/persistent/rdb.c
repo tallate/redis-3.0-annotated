@@ -27,10 +27,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "redis.h"
-#include "lzf.h"    /* LZF compression library */
-#include "zipmap.h"
-#include "endianconv.h"
+#include "../redis.h"
+#include "../lzf.h"    /* LZF compression library */
+#include "../codec/zipmap.h"
+#include "../endianconv.h"
 
 #include <math.h>
 #include <sys/types.h>

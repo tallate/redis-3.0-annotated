@@ -27,7 +27,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "redis.h"
+#include "../redis.h"
 
 void signalListAsReady(redisClient *c, robj *key);
 

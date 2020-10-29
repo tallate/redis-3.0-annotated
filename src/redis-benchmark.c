@@ -40,11 +40,11 @@
 #include <signal.h>
 #include <assert.h>
 
-#include "ae.h"
+#include "event/ae.h"
 #include "hiredis.h"
-#include "sds.h"
-#include "adlist.h"
-#include "zmalloc.h"
+#include "ds/sds.h"
+#include "ds/adlist.h"
+#include "ds/zmalloc.h"
 
 #define REDIS_NOTUSED(V) ((void) V)
 #define RANDPTR_INITIAL_SIZE 8

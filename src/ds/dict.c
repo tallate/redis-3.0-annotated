@@ -33,7 +33,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "fmacros.h"
+#include "../fmacros.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -45,7 +45,7 @@
 
 #include "dict.h"
 #include "zmalloc.h"
-#include "redisassert.h"
+#include "../redisassert.h"
 
 /* Using dictEnableResize() / dictDisableResize() we make possible to
  * enable/disable resizing of the hash table as needed. This is very important

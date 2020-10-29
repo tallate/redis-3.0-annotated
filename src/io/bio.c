@@ -83,7 +83,7 @@
  */
 
 
-#include "redis.h"
+#include "../redis.h"
 #include "bio.h"
 
 // 工作线程，斥互和条件变量

@@ -28,9 +28,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "redis.h"
+#include "../redis.h"
 #include "cluster.h"
-#include "endianconv.h"
+#include "../endianconv.h"
 
 #include <sys/types.h>
 #include <sys/socket.h>

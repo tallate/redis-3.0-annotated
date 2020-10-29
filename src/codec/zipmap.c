@@ -143,8 +143,8 @@
 
 #include <stdio.h>
 #include <string.h>
-#include "zmalloc.h"
-#include "endianconv.h"
+#include "../ds/zmalloc.h"
+#include "../endianconv.h"
 
 // 一个字节所能保存的 zipmap 元素数量不能等于或超过这个值
 #define ZIPMAP_BIGLEN 254

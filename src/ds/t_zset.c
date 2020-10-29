@@ -69,7 +69,7 @@
  *    它允许程序在执行像 ZREVRANGE 这样的命令时，从表尾向表头遍历跳跃表。
  */
 
-#include "redis.h"
+#include "../redis.h"
 #include <math.h>
 
 static int zslLexValueGteMin(robj *value, zlexrangespec *spec);

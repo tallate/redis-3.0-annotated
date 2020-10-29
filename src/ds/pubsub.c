@@ -27,7 +27,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "redis.h"
+#include "../redis.h"
 
 /*-----------------------------------------------------------------------------
  * Pubsub low level API

@@ -51,14 +51,14 @@
 #include <lua.h>
 #include <signal.h>
 
-#include "ae.h"      /* Event driven programming library */
-#include "sds.h"     /* Dynamic safe strings */
-#include "dict.h"    /* Hash tables */
-#include "adlist.h"  /* Linked lists */
-#include "zmalloc.h" /* total memory usage aware version of malloc/free */
-#include "anet.h"    /* Networking the easy way */
-#include "ziplist.h" /* Compact list data structure */
-#include "intset.h"  /* Compact integer set structure */
+#include "event/ae.h"      /* Event driven programming library */
+#include "ds/sds.h"     /* Dynamic safe strings */
+#include "ds/dict.h"    /* Hash tables */
+#include "ds/adlist.h"  /* Linked lists */
+#include "ds/zmalloc.h" /* total memory usage aware version of malloc/free */
+#include "io/anet.h"    /* Networking the easy way */
+#include "codec/ziplist.h" /* Compact list data structure */
+#include "codec/intset.h"  /* Compact integer set structure */
 #include "version.h" /* Version macro */
 #include "util.h"    /* Misc functions useful in many places */
 
@@ -1687,7 +1687,7 @@ void loadingProgress(off_t pos);
 void stopLoading(void);
 
 /* RDB persistence */
-#include "rdb.h"
+#include "persistent/rdb.h"
 
 /* AOF persistence */
 void flushAppendOnlyFile(int force);
