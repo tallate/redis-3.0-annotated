@@ -47,6 +47,7 @@ void replicationSendAck(void);
 
 // 创建 backlog
 void createReplicationBacklog(void) {
+    redisLog(REDIS_DEBUG, "Master开始创建backlog");
 
     redisAssert(server.repl_backlog == NULL);
 
@@ -513,6 +514,7 @@ need_full_resync:
 
 /* SYNC ad PSYNC command implemenation. */
 void syncCommand(redisClient *c) {
+    redisLog(REDIS_DEBUG, "Master开始处理Slave的 PSYNC 命令");
 
     /* ignore SYNC if already slave or in monitor mode */
     // 已经是 SLAVE ，或者处于 MONITOR 模式，返回
@@ -733,6 +735,7 @@ void replconfCommand(redisClient *c) {
 
 // master 将 RDB 文件发送给 slave 的写事件处理器
 void sendBulkToSlave(aeEventLoop *el, int fd, void *privdata, int mask) {
+    redisLog(REDIS_DEBUG, "Master开始执行将 RDB 文件发送给 slave 的写事件处理器的任务");
     redisClient *slave = privdata;
     REDIS_NOTUSED(el);
     REDIS_NOTUSED(mask);

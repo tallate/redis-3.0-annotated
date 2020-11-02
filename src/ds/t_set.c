@@ -31,6 +31,8 @@
 
 /*-----------------------------------------------------------------------------
  * Set Commands
+ * 1、如果可以被编码为整数，则实现为intset
+ * 2、否则，set底层实现为hash，其key为集合中的对象，值为NULL
  *----------------------------------------------------------------------------*/
 
 void sunionDiffGenericCommand(redisClient *c, robj **setkeys, int setnum, robj *dstkey, int op);

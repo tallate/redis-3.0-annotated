@@ -197,6 +197,7 @@ static const rio rioFileIO = {
  * 初始化文件流
  */
 void rioInitWithFile(rio *r, FILE *fp) {
+    redisLog(REDIS_DEBUG, "初始化RIO");
     *r = rioFileIO;
     r->io.file.fp = fp;
     r->io.file.buffered = 0;

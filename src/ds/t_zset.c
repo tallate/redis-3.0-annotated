@@ -72,6 +72,11 @@
 #include "../redis.h"
 #include <math.h>
 
+/*-----------------------------------------------------------------------------
+ * skiplist API
+ * 下面开始是跳表
+ *----------------------------------------------------------------------------*/
+
 static int zslLexValueGteMin(robj *value, zlexrangespec *spec);
 static int zslLexValueLteMax(robj *value, zlexrangespec *spec);
 
@@ -980,8 +985,12 @@ zskiplistNode *zslLastInLexRange(zskiplist *zsl, zlexrangespec *range) {
     return x;
 }
 
+
+
+
 /*-----------------------------------------------------------------------------
  * Ziplist-backed sorted set API
+ * 下面开始是压缩列表
  *----------------------------------------------------------------------------*/
 
 /*
@@ -1568,8 +1577,13 @@ unsigned char *zzlDeleteRangeByRank(unsigned char *zl, unsigned int start, unsig
     return zl;
 }
 
+
+
+
+
 /*-----------------------------------------------------------------------------
  * Common sorted set API
+ * 有序集合对外提供的API
  *----------------------------------------------------------------------------*/
 
 unsigned int zsetLength(robj *zobj) {
@@ -1733,6 +1747,8 @@ void zaddGenericCommand(redisClient *c, int incr) {
         return;
     }
 
+    redisLog(REDIS_DEBUG, "开始执行 redis zadd %lld", key->ptr);
+
     /* Start parsing all the scores, we need to emit any syntax error
      * before executing additions to the sorted set, as the command should
      * either execute fully or nothing at all. */
@@ -1744,7 +1760,7 @@ void zaddGenericCommand(redisClient *c, int incr) {
     }
 
     /* Lookup the key and create the sorted set if does not exist. */
-    // 取出有序集合对象
+    // 取出有序集合zset对象
     zobj = lookupKeyWrite(c->db,key);
     if (zobj == NULL) {
         // 有序集合不存在，创建新有序集合

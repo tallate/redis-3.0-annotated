@@ -5028,7 +5028,7 @@ void sentinelCheckTiltCondition(void) {
 void sentinelTimer(void) {
 
     // 记录本次 sentinel 调用的事件，
-    // 并判断是否需要进入 TITL 模式
+    // 并判断是否需要进入 Tilt 模式
     sentinelCheckTiltCondition();
 
     // 执行定期操作
